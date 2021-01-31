@@ -6,7 +6,13 @@ i = 1
 
 while i == 1:
 
-    year = int(input("enter year: "))
+    #error handle
+    while True:
+        try:
+            year = int(input("enter year: "))
+            break
+        except ValueError:
+            print("invalid number, try again.")
 
     if (year % 4) == 0:
         if (year % 100) == 0:
